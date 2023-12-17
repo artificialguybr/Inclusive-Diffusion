@@ -34,7 +34,7 @@ Follow our journey and stay updated with the latest developments:
 
 ## License
 
-This project is open source and available under the APACHE 2.0.
+This project is open source and available under the MIT LICENSE!
 
 ## Acknowledgments
 
