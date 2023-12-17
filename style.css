@@ -1,0 +1,203 @@
+/* Estilo base para o corpo da página */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Estilos para seções e containers */
+.section, .logo-container, .loading-container, .categories-container, .emoji-line-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.section {
+    flex-wrap: wrap;
+}
+
+.categories-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+    justify-items: center; /* Add this line */
+}
+
+/* Estilos específicos para elementos internos */
+.logo, .loading-gif {
+    max-width: 100%;
+    height: auto;
+}
+
+.loading-container {
+    align-items: center;
+    height: 500px;
+}
+
+.emoji-thumbnail, .emoji-thumbnail:hover, .emoji-thumbnail:active, .emoji-thumbnail:focus {
+    font-size: 1vw;
+    height: 60px;
+    width: 60px;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 2px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+    transform: none;
+}
+
+.emoji-thumbnail:hover {
+    transform: scale(1.05);
+}
+
+.emoji-line-container {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.emoji {
+    font-size: 3.5vw;
+    padding: 1vw;
+}
+
+/* Estilos para o campo de emojis selecionados */
+#selected-emojis, #selected-emojis:focus {
+    width: 150%;
+    height: 50px;
+    line-height: 50px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 3px solid #ddd;
+    border-radius: 30px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+    transition: border-color 0.3s, box-shadow 0.3s;
+    display: block;
+    margin: 0 auto 30px;
+    text-align: center;
+    box-sizing: border-box;
+    flex-grow: 1;
+}
+
+#selected-emojis:focus {
+    outline: none;
+    border-color: #007BFF;
+    box-shadow: 0 0 15px rgba(0,123,255,0.5);
+}
+
+/* Estilos para botões e ícones */
+#generate-btn, #start-speech-recognition {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#generate-btn {
+    background-color: #FFA500;
+    transition: background-color 0.3s;
+}
+
+#generate-btn.clicked {
+    background-color: #007BFF;
+}
+
+#start-speech-recognition {
+    height: 50px; /* Altura correspondente à da caixa de texto */
+    padding: 10px 20px; /* Ajuste o preenchimento para corresponder à caixa de entrada */
+    display: flex; /* Isso irá aplicar a exibição flexível ao botão */
+    align-items: center; /* Isso centralizará o ícone verticalmente */
+    justify-content: center; /* Isso centralizará o ícone horizontalmente */
+    margin: 0; /* Remover qualquer margem externa para alinhamento */
+}
+
+.fas.fa-microphone {
+    /* Se o ícone não estiver centralizado, ajuste com o seguinte: */
+    margin: 0; /* Remove a margem do ícone */
+}
+
+#start-speech-recognition.listening {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.emoji-clicked {
+    transform: scale(0.4);
+    transition: transform 0.4s;
+}
+
+/* Media Queries para ajustar layout em telas menores */
+@media (max-width: 768px) {
+    .categories-container {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 5px;
+        margin: 0 2px;
+        overflow-x: hidden;
+    }
+
+    .emoji {
+        font-size: 3.5vw;
+        padding: 1vw;
+    }
+}
+
+@media (max-width: 700px) {
+    .categories-container {
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+        justify-items: center;
+    }
+
+    .emoji-thumbnail {
+        font-size: 1vw;
+        height: 60px;
+        width: 60px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 2px;
+        box-sizing: border-box;
+        transition: transform 0.3s ease;
+        transform: none;
+    }
+
+    .emoji {
+        font-size: 6.5vw;
+    }
+
+    .logo-container, .categories-container, .emoji-line-container {
+        padding: 0;
+    }
+}
+
+/* Estilos gerais para flex containers */
+.flex.items-center {
+    display: flex;
+    align-items: center; /* This ensures vertical alignment */
+    gap: 4px; /* Maintain the gap as provided */
+    width: 100%; /* Add this line if not present */
+}
+
+.flex.items-center.gap-4 {
+    display: flex;
+    align-items: center; /* Isso deve alinhar verticalmente */
+    gap: 4px; /* Espaçamento horizontal entre itens */
+}
+
+.emoji-thumbnail:focus, #generate-btn:focus, #start-speech-recognition:focus {
+    outline: 3px solid #007BFF; /* Um contorno azul para indicar foco */
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .emoji-thumbnail:hover {
+        transform: none;
+    }
+}

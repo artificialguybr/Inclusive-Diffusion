@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inclusive Diffusion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script type="module" src="script.js"></script>
+    <script type="module" src="emojiMapping.js"></script>
+</head>
+<body>
+    <section class="flex flex-col items-center justify-center space-y-10 p-5">
+        <div class="logo-container my-5">
+            <img
+                alt="InclusiveDiffusion Logo"
+                class="logo"
+                height="150"
+                src="/logo.png"
+                width="350"
+            />
+        </div>
+        <div class="info-container text-center mt-5">
+            <p>This is an amateur project that I created to refresh my CSS, HTML, and JS skills after spending years focusing on Python. It was entirely developed using GPT-4, and the logo was generated with Dall-e 3 (text in Canva). Using fal.ai API!</p>
+            <p>Created by <a href="https://twitter.com/artificialguybr" target="_blank">@artificialguybr</a></p>
+        </div>
+
+        <div id="emoji-grid" class="categories-container my-5">
+
+            <!-- Categoria 1: Rostos e Emoções -->
+
+            <div class="emoji-thumbnail flex justify-center items-center h-16 w-16 border rounded-lg bg-gray-200 cursor-pointer" aria-label="Faces and Emotions Category" data-category="1">
+                <span class="text-2xl">😀</span>
+            </div>
+            
+            <!-- Categoria 2: Animais e Natureza -->
+            <div class="emoji-thumbnail flex justify-center items-center h-16 w-16 border rounded-lg bg-gray-200 cursor-pointer" data-category="2" aria-label="Animals and Nature Category">
+                <span class="text-2xl">🌿</span>
+            </div>
+
+            
+            <!-- Categoria 3: Comida e Bebida -->
+            <div class="emoji-thumbnail flex justify-center items-center h-16 w-16 border rounded-lg bg-gray-200 cursor-pointer" data-category="3" aria-label="Food and Drink Category">
+                <span class="text-2xl">🍕</span>
+            </div>
+
+            
+            <!-- Categoria 4: Atividades e Hobbies -->
+            <div class="emoji-thumbnail flex justify-center items-center h-16 w-16 border rounded-lg bg-gray-200 cursor-pointer" data-category="4" aria-label="Activities and Hobbies Category">
+                <span class="text-2xl">⚽</span>
+            </div>
+
+            <!-- Categoria 5: Viagens e Lugares -->
+            <div class="emoji-thumbnail flex justify-center items-center h-16 w-16 border rounded-lg bg-gray-200 cursor-pointer" data-category="5" aria-label="Travel and Places Category">
+                <span class="text-2xl">✈️</span>
+            </div>
+            
+            <!-- Categoria 6: Objetos e Tecnologia -->
+            <div class="emoji-thumbnail flex justify-center items-center h-16 w-16 border rounded-lg bg-gray-200 cursor-pointer" data-category="6" aria-label="Objects and Technology Category">
+                <span class="text-2xl">📱</span>
+            </div>
+            
+            <!-- Categoria 7: Símbolos e Sinais -->
+            <div class="emoji-thumbnail flex justify-center items-center h-16 w-16 border rounded-lg bg-gray-200 cursor-pointer" data-category="7" aria-label="Symbols and Signs Category">
+                <span class="text-2xl">💡</span>
+            </div>
+            
+            <!-- Categoria 8: Bandeiras -->
+            <div class="emoji-thumbnail flex justify-center items-center h-16 w-16 border rounded-lg bg-gray-200 cursor-pointer" data-category="8" aria-label="Flags Category">
+                <span class="text-2xl">🌍</span>
+            </div>
+        </div>
+
+        <div id="emoji-all-categories" class="emoji-line-container my-5">
+            <div id="emoji-category-1" class="emoji-category hidden" role="list">
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-4">
+                    <span class="emoji" role="listitem" aria-label="Grinning Face">😃</span>
+                    <span class="emoji" role="listitem" aria-label="Face with Tears of Joy">😂</span>
+                    <span class="emoji" role="listitem" aria-label="Smiling Face with Tear">🥲</span>
+                    <span class="emoji" role="listitem" aria-label="Smiling Face with Heart-Eyes">😍</span>
+                    <span class="emoji" role="listitem" aria-label="Unamused Face">😒</span>
+                    <span class="emoji" role="listitem" aria-label="Pensive Face">😔</span>
+                    <span class="emoji" role="listitem" aria-label="Pouting Face">😡</span>
+                    <span class="emoji" role="listitem" aria-label="Exploding Head">🤯</span>
+                    <span class="emoji" role="listitem" aria-label="Sleeping Face">😴</span>
+                    <span class="emoji" role="listitem" aria-label="Partying Face">🥳</span>
+                    <span class="emoji" role="listitem" aria-label="Grinning Face with Big Eyes">😀</span>
+                    <span class="emoji" role="listitem" aria-label="Grinning Face with Smiling Eyes">😄</span>
+                    <span class="emoji" role="listitem" aria-label="Beaming Face with Smiling Eyes">😁</span>
+                    <span class="emoji" role="listitem" aria-label="Grinning Squinting Face">😆</span>
+                    <span class="emoji" role="listitem" aria-label="Grinning Face with Sweat">😅</span>
+                    <span class="emoji" role="listitem" aria-label="Rolling on the Floor Laughing">🤣</span>
+                    <span class="emoji" role="listitem" aria-label="Slightly Smiling Face">🙂</span>
+                    <span class="emoji" role="listitem" aria-label="Upside-Down Face">🙃</span>
+                    <span class="emoji" role="listitem" aria-label="Winking Face">😉</span>
+                    <span class="emoji" role="listitem" aria-label="Smiling Face with Smiling Eyes">😊</span>
+                    <span class="emoji" role="listitem" aria-label="Smiling Face with Halo">😇</span>
+                    <span class="emoji" role="listitem" aria-label="Smiling Face with Hearts">🥰</span>
+                    <span class="emoji" role="listitem" aria-label="Star-Struck">🤩</span>
+                    <span class="emoji" role="listitem" aria-label="Face Blowing a Kiss">😘</span>
+                    <span class="emoji" role="listitem" aria-label="Kissing Face">😗</span>
+                    <span class="emoji" role="listitem" aria-label="Kissing Face with Closed Eyes">😚</span>
+                    <span class="emoji" role="listitem" aria-label="Face Savoring Food">😋</span>
+                    <span class="emoji" role="listitem" aria-label="Face with Tongue">😛</span>
+                    <span class="emoji" role="listitem" aria-label="Winking Face with Tongue">😜</span>
+                    <span class="emoji" role="listitem" aria-label="Zany Face">🤪</span>
+                    <span class="emoji" role="listitem" aria-label="Squinting Face with Tongue">😝</span>
+                    <span class="emoji" role="listitem" aria-label="Money-Mouth Face">🤑</span>
+                    <span class="emoji" role="listitem" aria-label="Hugging Face">🤗</span>
+                    <span class="emoji" role="listitem" aria-label="Face with Hand Over Mouth">🤭</span>
+                    <span class="emoji" role="listitem" aria-label="Shushing Face">🤫</span>
+                    <span class="emoji" role="listitem" aria-label="Thinking Face">🤔</span>
+                </div>
+            </div>
+        </div>
+        
+        <div id="emoji-category-2" class="emoji-category hidden" role="list">
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-4">
+                <span class="emoji" role="listitem" aria-label="Dog Face">🐶</span>
+                <span class="emoji" role="listitem" aria-label="Cat Face">🐱</span>
+                <span class="emoji" role="listitem" aria-label="Mouse Face">🐭</span>
+                <span class="emoji" role="listitem" aria-label="Hamster Face">🐹</span>
+                <span class="emoji" role="listitem" aria-label="Rabbit Face">🐰</span>
+                <span class="emoji" role="listitem" aria-label="Fox Face">🦊</span>
+                <span class="emoji" role="listitem" aria-label="Bear Face">🐻</span>
+                <span class="emoji" role="listitem" aria-label="Panda Face">🐼</span>
+                <span class="emoji" role="listitem" aria-label="Koala">🐨</span>
+                <span class="emoji" role="listitem" aria-label="Tiger Face">🐯</span>
+                <span class="emoji" role="listitem" aria-label="Lion Face">🦁</span>
+                <span class="emoji" role="listitem" aria-label="Cow Face">🐮</span>
+                <span class="emoji" role="listitem" aria-label="Pig Face">🐷</span>
+                <span class="emoji" role="listitem" aria-label="Pig Nose">🐽</span>
+                <span class="emoji" role="listitem" aria-label="Frog Face">🐸</span>
+                <span class="emoji" role="listitem" aria-label="Monkey Face">🐵</span>
+                <span class="emoji" role="listitem" aria-label="See-No-Evil Monkey">🙈</span>
+                <span class="emoji" role="listitem" aria-label="Hear-No-Evil Monkey">🙉</span>
+                <span class="emoji" role="listitem" aria-label="Speak-No-Evil Monkey">🙊</span>
+                <span class="emoji" role="listitem" aria-label="Monkey">🐒</span>
+                <span class="emoji" role="listitem" aria-label="Chicken">🐔</span>
+                <span class="emoji" role="listitem" aria-label="Penguin">🐧</span>
+                <span class="emoji" role="listitem" aria-label="Bird">🐦</span>
+                <span class="emoji" role="listitem" aria-label="Baby Chick">🐤</span>
+                <span class="emoji" role="listitem" aria-label="Hatching Chick">🐣</span>
+                <span class="emoji" role="listitem" aria-label="Front-Facing Baby Chick">🐥</span>
+                <span class="emoji" role="listitem" aria-label="Duck">🦆</span>
+                <span class="emoji" role="listitem" aria-label="Eagle">🦅</span>
+                <span class="emoji" role="listitem" aria-label="Owl">🦉</span>
+                <span class="emoji" role="listitem" aria-label="Bat">🦇</span>
+                <span class="emoji" role="listitem" aria-label="Wolf">🐺</span>
+                <span class="emoji" role="listitem" aria-label="Boar">🐗</span>
+                <span class="emoji" role="listitem" aria-label="Horse">🐴</span>
+                <span class="emoji" role="listitem" aria-label="Unicorn">🦄</span>
+                <span class="emoji" role="listitem" aria-label="Honeybee">🐝</span>
+                <span class="emoji" role="listitem" aria-label="Bug">🐛</span>
+                <span class="emoji" role="listitem" aria-label="Butterfly">🦋</span>
+                <span class="emoji" role="listitem" aria-label="Snail">🐌</span>
+                <span class="emoji" role="listitem" aria-label="Lady Beetle">🐞</span>
+                <span class="emoji" role="listitem" aria-label="Ant">🐜</span>
+            </div>
+        </div>
+        
+        <div id="emoji-category-3" class="emoji-category hidden" role="list">
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-4">
+              <span class="emoji" role="listitem" aria-label="Hamburger">🍔</span>
+              <span class="emoji" role="listitem" aria-label="French Fries">🍟</span>
+              <span class="emoji" role="listitem" aria-label="Hot Dog">🌭</span>
+              <span class="emoji" role="listitem" aria-label="Pizza">🍕</span>
+              <span class="emoji" role="listitem" aria-label="Taco">🌮</span>
+              <span class="emoji" role="listitem" aria-label="Burrito">🌯</span>
+              <span class="emoji" role="listitem" aria-label="Falafel Wrap">🥙</span>
+              <span class="emoji" role="listitem" aria-label="Falafel">🧆</span>
+              <span class="emoji" role="listitem" aria-label="Soup">🍲</span>
+              <span class="emoji" role="listitem" aria-label="Salad">🥗</span>
+              <span class="emoji" role="listitem" aria-label="Sushi">🍣</span>
+              <span class="emoji" role="listitem" aria-label="Bento Box">🍱</span>
+              <span class="emoji" role="listitem" aria-label="Curry Rice">🍛</span>
+              <span class="emoji" role="listitem" aria-label="Ramen">🍜</span>
+              <span class="emoji" role="listitem" aria-label="Spaghetti">🍝</span>
+              <span class="emoji" role="listitem" aria-label="Roasted Sweet Potato">🍠</span>
+              <span class="emoji" role="listitem" aria-label="Shrimp">🍤</span>
+              <span class="emoji" role="listitem" aria-label="Chicken Leg">🍗</span>
+              <span class="emoji" role="listitem" aria-label="Meat on Bone">🍖</span>
+              <span class="emoji" role="listitem" aria-label="Steak">🥩</span>
+              <span class="emoji" role="listitem" aria-label="Bacon">🥓</span>
+              <span class="emoji" role="listitem" aria-label="Sandwich">🥪</span>
+            </div>
+          </div>
+        
+          <div id="emoji-category-4" class="emoji-category hidden" role="list">
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-4">
+                <span class="emoji" role="listitem" aria-label="Soccer Ball">⚽</span>
+                <span class="emoji" role="listitem" aria-label="Basketball">🏀</span>
+                <span class="emoji" role="listitem" aria-label="American Football">🏈</span>
+                <span class="emoji" role="listitem" aria-label="Baseball">⚾</span>
+                <span class="emoji" role="listitem" aria-label="Softball">🥎</span>
+                <span class="emoji" role="listitem" aria-label="Tennis">🎾</span>
+                <span class="emoji" role="listitem" aria-label="Volleyball">🏐</span>
+                <span class="emoji" role="listitem" aria-label="Rugby Football">🏉</span>
+                <span class="emoji" role="listitem" aria-label="Billiards">🎱</span>
+                <span class="emoji" role="listitem" aria-label="Table Tennis">🏓</span>
+                <span class="emoji" role="listitem" aria-label="Badminton">🏸</span>
+                <span class="emoji" role="listitem" aria-label="Flying Disc">🥏</span>
+                <span class="emoji" role="listitem" aria-label="Field Hockey">🏑</span>
+                <span class="emoji" role="listitem" aria-label="Ice Hockey">🏒</span>
+                <span class="emoji" role="listitem" aria-label="Cricket">🏏</span>
+                <span class="emoji" role="listitem" aria-label="Lacrosse">🥍</span>
+                <span class="emoji" role="listitem" aria-label="Archery">🏹</span>
+                <span class="emoji" role="listitem" aria-label="Fishing Pole">🎣</span>
+                <span class="emoji" role="listitem" aria-label="Golf">⛳️</span>
+                <span class="emoji" role="listitem" aria-label="Boxing Glove">🥊</span>
+                <span class="emoji" role="listitem" aria-label="Martial Arts Uniform">🥋</span>
+                <span class="emoji" role="listitem" aria-label="Running Shirt">🎽</span>
+                <span class="emoji" role="listitem" aria-label="Ice Skate">⛸</span>
+                <span class="emoji" role="listitem" aria-label="Curling Stone">🥌</span>
+                <span class="emoji" role="listitem" aria-label="Sled">🛷</span>
+                <span class="emoji" role="listitem" aria-label="Skateboard">🛹</span>
+                <span class="emoji" role="listitem" aria-label="Ski">🎿</span>
+                <span class="emoji" role="listitem" aria-label="Skiing">⛷</span>
+                <span class="emoji" role="listitem" aria-label="Snowboarder">🏂</span>
+                <span class="emoji" role="listitem" aria-label="Parachute">🪂</span>
+                <span class="emoji" role="listitem" aria-label="Weightlifting - Woman">🏋️‍♀️</span>
+                <span class="emoji" role="listitem" aria-label="Weightlifting - Man">🏋️‍♂️</span>
+                <span class="emoji" role="listitem" aria-label="Wrestling - Woman">🤼‍♀️</span>
+                <span class="emoji" role="listitem" aria-label="Wrestling - Man">🤼‍♂️</span>
+                <span class="emoji" role="listitem" aria-label="Cartwheel - Woman">🤸‍♀️</span>
+                <span class="emoji" role="listitem" aria-label="Cartwheel - Man">🤸‍♂️</span>
+                <span class="emoji" role="listitem" aria-label="Basketball - Woman">⛹️‍♀️</span>
+                <span class="emoji" role="listitem" aria-label="Basketball - Man">⛹️‍♂️</span>
+                <span class="emoji" role="listitem" aria-label="Fencing">🤺</span>
+                <span class="emoji" role="listitem" aria-label="Handball - Woman">🤾‍♀️</span>
+            </div>
+        </div>
+        
+        <div id="emoji-category-5" class="emoji-category hidden" role="list">
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-4">
+                <span class="emoji" role="listitem" aria-label="Airplane">✈️</span>
+                <span class="emoji" role="listitem" aria-label="Rocket">🚀</span>
+                <span class="emoji" role="listitem" aria-label="Helicopter">🚁</span>
+                <span class="emoji" role="listitem" aria-label="Flying Saucer">🛸</span>
+                <span class="emoji" role="listitem" aria-label="Bicycle">🚲</span>
+                <span class="emoji" role="listitem" aria-label="Scooter">🛴</span>
+                <span class="emoji" role="listitem" aria-label="Skateboard">🛹</span>
+                <span class="emoji" role="listitem" aria-label="Motor Scooter">🛵</span>
+                <span class="emoji" role="listitem" aria-label="Car">🚗</span>
+                <span class="emoji" role="listitem" aria-label="Taxi">🚕</span>
+                <span class="emoji" role="listitem" aria-label="Sports Car">🚙</span>
+                <span class="emoji" role="listitem" aria-label="Bus">🚌</span>
+                <span class="emoji" role="listitem" aria-label="Trolleybus">🚎</span>
+                <span class="emoji" role="listitem" aria-label="Racing Car">🏎</span>
+                <span class="emoji" role="listitem" aria-label="Police Car">🚓</span>
+                <span class="emoji" role="listitem" aria-label="Ambulance">🚑</span>
+                <span class="emoji" role="listitem" aria-label="Fire Engine">🚒</span>
+                <span class="emoji" role="listitem" aria-label="Minibus">🚐</span>
+                <span class="emoji" role="listitem" aria-label="Delivery Truck">🚚</span>
+                <span class="emoji" role="listitem" aria-label="Articulated Lorry">🚛</span>
+                <span class="emoji" role="listitem" aria-label="Tractor">🚜</span>
+                <span class="emoji" role="listitem" aria-label="Auto Rickshaw">🛺</span>
+                <span class="emoji" role="listitem" aria-label="Oncoming Bus">🚍</span>
+                <span class="emoji" role="listitem" aria-label="Oncoming Car">🚘</span>
+                <span class="emoji" role="listitem" aria-label="Taxi">🚖</span>
+                <span class="emoji" role="listitem" aria-label="Pickup Truck">🛻</span>
+                <span class="emoji" role="listitem" aria-label="Police Car">🚔</span>
+                <span class="emoji" role="listitem" aria-label="Aerial Tramway">🚡</span>
+                <span class="emoji" role="listitem" aria-label="Mountain Cableway">🚠</span>
+                <span class="emoji" role="listitem" aria-label="Railway Car">🚃</span>
+                <span class="emoji" role="listitem" aria-label="Locomotive">🚂</span>
+                <span class="emoji" role="listitem" aria-label="Train">🚆</span>
+                <span class="emoji" role="listitem" aria-label="High-Speed Train">🚄</span>
+                <span class="emoji" role="listitem" aria-label="Bullet Train">🚅</span>
+                <span class="emoji" role="listitem" aria-label="Light Rail">🚈</span>
+                <span class="emoji" role="listitem" aria-label="Monorail">🚝</span>
+                <span class="emoji" role="listitem" aria-label="Mountain Railway">🚞</span>
+                <span class="emoji" role="listitem" aria-label="Tram">🚋</span>
+                <span class="emoji" role="listitem" aria-label="Light Rail">🚊</span>
+                <span class="emoji" role="listitem" aria-label="Train Station">🚉</span>
+            </div>
+        </div>
+        
+        <div id="emoji-category-6" class="emoji-category hidden" role="list">
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-4">
+                <span class="emoji" role="listitem" aria-label="Lightbulb">💡</span>
+                <span class="emoji" role="listitem" aria-label="Flashlight">🔦</span>
+                <span class="emoji" role="listitem" aria-label="Candle">🕯️</span>
+                <span class="emoji" role="listitem" aria-label="Lamp">🪔</span>
+                <span class="emoji" role="listitem" aria-label="Fire Extinguisher">🧯</span>
+                <span class="emoji" role="listitem" aria-label="Oil Drum">🛢️</span>
+                <span class="emoji" role="listitem" aria-label="Bomb">💣</span>
+                <span class="emoji" role="listitem" aria-label="Firecracker">🧨</span>
+                <span class="emoji" role="listitem" aria-label="Axe">🪓</span>
+                <span class="emoji" role="listitem" aria-label="Knife">🔪</span>
+                <span class="emoji" role="listitem" aria-label="Dagger">🗡️</span>
+                <span class="emoji" role="listitem" aria-label="Crossed Swords">⚔️</span>
+                <span class="emoji" role="listitem" aria-label="Shield">🛡️</span>
+                <span class="emoji" role="listitem" aria-label="Door">🚪</span>
+                <span class="emoji" role="listitem" aria-label="Couch">🛋️</span>
+                <span class="emoji" role="listitem" aria-label="Bed">🛏️</span>
+                <span class="emoji" role="listitem" aria-label="Chair">🪑</span>
+                <span class="emoji" role="listitem" aria-label="Toilet">🚽</span>
+                <span class="emoji" role="listitem" aria-label="Shower">🚿</span>
+                <span class="emoji" role="listitem" aria-label="Bathtub">🛁</span>
+                <span class="emoji" role="listitem" aria-label="Soap">🧼</span>
+                <span class="emoji" role="listitem" aria-label="Sponge">🧽</span>
+                <span class="emoji" role="listitem" aria-label="Lotion Bottle">🧴</span>
+                <span class="emoji" role="listitem" aria-label="Razor">🪒</span>
+                <span class="emoji" role="listitem" aria-label="Broom">🧹</span>
+                <span class="emoji" role="listitem" aria-label="Basket">🧺</span>
+            </div>
+        </div>
+        <div id="emoji-category-7" class="emoji-category hidden" role="list">
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-4">
+              <span class="emoji" role="listitem" aria-label="Infinity">♾️</span>
+              <span class="emoji" role="listitem" aria-label="Dice">🎲</span>
+              <span class="emoji" role="listitem" aria-label="Bullseye">🎯</span>
+              <span class="emoji" role="listitem" aria-label="Bowling">🎳</span>
+              <span class="emoji" role="listitem" aria-label="Video Game">🎮</span>
+              <span class="emoji" role="listitem" aria-label="Slot Machine">🎰</span>
+              <span class="emoji" role="listitem" aria-label="Puzzle Piece">🧩</span>
+              <span class="emoji" role="listitem" aria-label="Artist Palette">🎨</span>
+              <span class="emoji" role="listitem" aria-label="Thread">🧵</span>
+              <span class="emoji" role="listitem" aria-label="Yarn">🧶</span>
+              <span class="emoji" role="listitem" aria-label="Books">📚</span>
+              <span class="emoji" role="listitem" aria-label="Open Book">📖</span>
+              <span class="emoji" role="listitem" aria-label="Notebook with Decorative Cover">📔</span>
+              <span class="emoji" role="listitem" aria-label="Ledger">📒</span>
+              <span class="emoji" role="listitem" aria-label="Bookmark Tabs">📑</span>
+              <span class="emoji" role="listitem" aria-label="Notebook">📓</span>
+              <span class="emoji" role="listitem" aria-label="Page with Curl">📃</span>
+              <span class="emoji" role="listitem" aria-label="Scroll">📜</span>
+              <span class="emoji" role="listitem" aria-label="Page Facing Up">📄</span>
+              <span class="emoji" role="listitem" aria-label="Newspaper">📰</span>
+              <span class="emoji" role="listitem" aria-label="Rolled-Up Newspaper">🗞️</span>
+              <span class="emoji" role="listitem" aria-label="Bookmark">🔖</span>
+              <span class="emoji" role="listitem" aria-label="Label">🏷️</span>
+              <span class="emoji" role="listitem" aria-label="Money Bag">💰</span>
+              <span class="emoji" role="listitem" aria-label="Yen Banknote">💴</span>
+              <span class="emoji" role="listitem" aria-label="Dollar Banknote">💵</span>
+              <span class="emoji" role="listitem" aria-label="Euro Banknote">💶</span>
+              <span class="emoji" role="listitem" aria-label="Pound Banknote">💷</span>
+              <span class="emoji" role="listitem" aria-label="Money with Wings">💸</span>
+              <span class="emoji" role="listitem" aria-label="Credit Card">💳</span>
+              <span class="emoji" role="listitem" aria-label="Gem Stone">💎</span>
+              <span class="emoji" role="listitem" aria-label="Balance Scale">⚖️</span>
+              <span class="emoji" role="listitem" aria-label="Toolbox">🧰</span>
+              <span class="emoji" role="listitem" aria-label="Hammer">🔨</span>
+              <span class="emoji" role="listitem" aria-label="Pick">⛏️</span>
+              <span class="emoji" role="listitem" aria-label="Hammer and Pick">⚒️</span>
+              <span class="emoji" role="listitem" aria-label="Hammer and Wrench">🛠️</span>
+              <span class="emoji" role="listitem" aria-label="Dagger">🗡️</span>
+              <span class="emoji" role="listitem" aria-label="Crossed Swords">⚔️</span>
+            </div>
+          </div>
+        
+          <div id="emoji-category-8" class="emoji-category hidden" role="list">
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-4">
+                <span class="emoji" role="listitem" aria-label="White Flag">🏳️</span>
+                <span class="emoji" role="listitem" aria-label="Black Flag">🏴</span>
+                <span class="emoji" role="listitem" aria-label="Chequered Flag">🏁</span>
+                <span class="emoji" role="listitem" aria-label="Triangular Flag">🚩</span>
+                <span class="emoji" role="listitem" aria-label="Rainbow Flag">🏳️‍🌈</span>
+                <span class="emoji" role="listitem" aria-label="Pirate Flag">🏴‍☠️</span>
+            </div>
+        </div>
+        </div>
+        <div class="flex items-center gap-4">
+            <input
+                id="selected-emojis"
+                class="w-full h-10 px-3 py-2 text-base text-gray-700 placeholder-gray-600 border rounded-lg focus:shadow-outline"
+                placeholder="Selected emojis will appear here..."
+                type="text"
+                aria-label="Selected Emojis"
+            />
+            <button id="start-speech-recognition" class="bg-blue-500 text-white p-2 rounded-lg text-lg font-semibold"  aria-label="Start Speech Recognition">
+                <i class="fas fa-microphone"></i>
+            </button>
+        </div>
+        <div class="w-1/2">
+            <button id="generate-btn" class="bg-orange-500 text-white w-full py-2 rounded-lg text-lg font-semibold" aria-label="Generate Image">GENERATE IMAGE</button>
+        </div>
+        <div class="flex justify-center mt-10">
+            <img
+                alt="Generated Image"
+                class="aspect-[1/1] overflow-hidden rounded-lg object-contain object-center generated-image"
+                height="500"
+                src="/placeholder.svg"
+                width="500"
+                style="display: none;"
+        </div>
+    </div>
+    <div class="loading-container hidden">
+        <img src="/loading.gif" alt="Loading" class="loading-gif"/>
+    </div>
+    </section>
+</body>
+</html>
